@@ -1,7 +1,10 @@
 Audio Experiments
 Programmatic audio processing utilities built to solve real problems I encountered operating a vocal recording studio.
 Background
+
 After 8 years of making audio quality decisions one file at a time, I started building tools to automate workflows while maintaining the perceptual and technical standards I apply manually. These utilities emerged from actual production needs]
+
+
 1. Batch MP3 Converter
 Converts audio files to MP3 format with consistent encoding settings across large batches.
 Why I built this: Studio deliverables often require MP3 format, but manual conversion through DAWs is time-consuming and inconsistent. This ensures every file uses the same encoder settings while processing dozens of files in parallel.
@@ -14,7 +17,7 @@ Quality validation after conversion
 
 
 2. Batch ML Preprocessing Pipeline
-3. 
+
 Prepares audio files for machine learning applications with consistent formatting and quality standards.
 Why I built this: Working on AI voice data collection projects exposed the gap between studio-quality recordings and ML-ready datasets. Manual preprocessing doesn't scale to hundreds of files.
 Features:
@@ -25,13 +28,12 @@ Silence trimming from start/end
 Format standardization (mono/stereo, bit depth)
 Quality validation and reporting
 
-
-
 Normalize loudness across all files
 Convert to consistent sample rate
 Trim silence
 Convert to mono if needed
 Generate quality report
+
 
 3. ISP Overshoot Detector
 Identifies intersample peak (ISP) overshoot in MP3 conversions — the hidden clipping that occurs between samples during lossy encoding.
@@ -55,7 +57,7 @@ Python dependencies:
 bashpip install pydub numpy scipy
 Why These Tools?
 The Scaling Problem
-In a boutique studio environment, I could manually check every file, adjust levels, and ensure quality. But working with AI voice datasets (90+ participants, 30+ hours of recordings) or batch client deliverables made manual processing impractical.
+In a studio environment, I could manually check every file, adjust levels, and ensure quality. But working with larger  datasets or batch client deliverables made manual processing impractical.
 The Quality Problem
 Automation without understanding degrades quality. These tools encode the audio engineering decisions I'd make manually:
 
